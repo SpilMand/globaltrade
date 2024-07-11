@@ -1,0 +1,41 @@
+.thanks {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-top: to-rem(17);
+  padding-bottom: to-rem(49);
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  gap: to-rem(25);
+  @media (min-width: 1024px) {
+    padding-top: to-rem(100);
+    padding-bottom: to-rem(105);
+  }
+
+  svg {
+    margin-bottom: to-rem(23);
+    @media (min-width: 1024px) {
+      width: to-rem(674);
+      height: to-rem(71);
+      margin-bottom: to-rem(90);
+    }
+  }
+
+  &__subtitle {
+    z-index: 1;
+    @media (min-width: 1024px) {
+      max-width: 50%;
+    }
+  }
+
+  &__btn {
+    z-index: 1;
+    margin-top: auto;
+  }
+
+  &__bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

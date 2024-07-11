@@ -1,0 +1,36 @@
+.s-form-webinar-1 {
+  .m-form__title {
+    margin-bottom: var(--a-padding-x5);
+    @media (min-width: 1200px) {
+      margin-bottom: var(--a-padding-x6);
+    }
+  }
+}
+.s-form-webinar-2 {
+  .s-form__description {
+    font-size: scaling(17);
+    @media (min-width: 1200px) {
+      font-size: scaling(19);
+    }
+  }
+  .s-form__img-person {
+    display: none;
+  }
+  .s-form__img-rune {
+    height: scaling(300);
+    width: unset;
+    @media (min-width: 1200px) {
+      height: 100%;
+    }
+    img {
+      height: 100%;
+      width: unset;
+      &:first-of-type {
+        display: none;
+      }
+      &:last-of-type {
+        display: block;
+      }
+    }
+  }
+}

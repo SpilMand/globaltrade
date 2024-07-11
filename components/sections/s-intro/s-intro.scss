@@ -1,0 +1,117 @@
+.s-intro {
+  &.l-default {
+    padding-right: 0;
+    padding-left: 0;
+    @media (min-width: 768px) {
+      padding-right: var(--a-padding-x5);
+      padding-left: var(--a-padding-x5);
+    }
+    @media (min-width: 1200px) {
+      padding-right: scaling(42);
+      padding-left: scaling(42);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    min-height: scaling(512);
+    background: url('/images/s-intro/intro-mobile.png') center no-repeat;
+    background-size: cover;
+    border-radius: var(--border-radius-x5);
+
+    @media (min-width: 768px) {
+      min-height: scaling(660);
+      background: url('/images/s-intro/intro-desktop.jpg') center no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: scaling(700);
+    margin-top: auto;
+    padding: var(--a-padding-x3);
+    color: var(--color-white);
+    text-align: center;
+    @media (min-width: 768px) {
+      margin-top: unset;
+      padding: unset;
+      padding-top: var(--a-padding-x6);
+      padding-left: var(--a-padding-x6);
+      padding-bottom: var(--a-padding-x6);
+      text-align: start;
+    }
+  }
+
+  &__title {
+    margin-bottom: var(--a-padding-x2);
+    font-size: scaling(38);
+
+    @media (min-width: 1200px) {
+      margin-bottom: var(--a-padding-x8);
+      font-size: scaling(118);
+    }
+  }
+
+  &__subtitle {
+    display: none;
+    margin-bottom: scaling(100);
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__text {
+    display: none;
+    margin-bottom: var(--a-padding-x7);
+    @media (min-width: 768px) {
+      margin-top: auto;
+      display: block;
+    }
+  }
+
+  &__textMobile {
+    display: block;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__vertical {
+    display: none;
+    padding: var(--a-padding-x5);
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    box-sizing: border-box;
+    margin-bottom: scaling(30);
+    padding: scaling(10) scaling(20);
+    color: var(--color-white);
+    background: rgb(28 28 28 / 50%);
+    border: 1px solid #666;
+    border-radius: scaling(16);
+    backdrop-filter: blur(10px);
+    order: 0;
+    flex-grow: 0;
+
+    &-icon {
+      z-index: 1;
+    }
+  }
+
+  &__btn {
+    margin-top: var(--a-padding-x5);
+    @media (min-width: 768px) {
+      margin-top: unset;
+    }
+  }
+}

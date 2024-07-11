@@ -1,0 +1,108 @@
+.s-header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  padding: var(--a-padding-x2) 0;
+  background: var(--color-bg);
+  @media (min-width: 992px) {
+    padding: scaling(22) 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--a-padding-x4);
+    @media (min-width: 992px) {
+      margin: 0 var(--a-padding-x2) 0 0;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: scaling(166);
+
+    svg {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    @media (min-width: 768px) {
+      max-width: scaling(304);
+    }
+  }
+
+  &__mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: scaling(32);
+    height: scaling(32);
+    background: var(--color-grey-medium);
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    svg {
+      display: block;
+      width: 100%;
+      max-width: scaling(18);
+      height: auto;
+    }
+    @media (min-width: 768px) {
+      background: var(--color-blue);
+
+      svg {
+        path {
+          fill: var(--color-white);
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      width: auto;
+      height: auto;
+      padding: scaling(10, 20);
+      color: var(--color-white);
+      border-radius: var(--border-radius-x10);
+    }
+
+    &-desktop {
+      display: none;
+      @media (min-width: 992px) {
+        display: flex;
+      }
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: 992px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__menu {
+    @media (min-width: 992px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-item {
+      display: flex;
+      width: auto;
+
+      &-link {
+        padding: scaling(6, 12);
+        border: scaling(1) solid var(--color-grey-line);
+        border-radius: var(--border-radius-x10);
+        @media (min-width: 1200px) {
+          padding: scaling(10, 20);
+          background: var(--color-grey-medium);
+          border: none;
+        }
+      }
+    }
+  }
+}

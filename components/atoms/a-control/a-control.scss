@@ -1,0 +1,35 @@
+.a-control {
+  &__input {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__trigger {
+    width: scaling(16);
+    height: scaling(16);
+    background-color: var(--color-grey-medium);
+    border-radius: scaling(4);
+    cursor: pointer;
+
+    &--checked {
+      background-image: url('~/assets/icons/checked.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    margin-left: var(--a-padding-x2);
+    color: var(--color-control-text);
+    font-weight: 500;
+    cursor: pointer;
+
+    &--contrast {
+      color: var(--color-control-text-contrast);
+    }
+  }
+}

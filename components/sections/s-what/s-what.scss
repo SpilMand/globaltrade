@@ -1,0 +1,102 @@
+.s-what {
+  &__inner {
+    display: grid;
+    gap: scaling(20);
+    @media (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr 2fr;
+    }
+  }
+
+  &__title {
+    margin-bottom: var(--a-padding-x6);
+    @media (min-width: 1200px) {
+      margin-bottom: scaling(50);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: scaling(34);
+    background-color: var(--color-white);
+    padding: var(--a-padding-x3);
+    border-radius: scaling(12);
+    @media (min-width: 1200px) {
+      padding: var(--a-padding-x6);
+      border-radius: scaling(16);
+    }
+
+    &-title {
+      color: var(--color-blue);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: scaling(16);
+    }
+
+    &-item {
+      position: relative;
+      padding-left: var(--a-padding-x7);
+
+      &::before {
+        content: '';
+        width: scaling(12);
+        height: scaling(12);
+        position: absolute;
+        left: 0;
+        top: scaling(4);
+        background-color: var(--color-black);
+        border-radius: scaling(2.44);
+      }
+    }
+  }
+
+  &__main {
+    min-height: scaling(426);
+    position: relative;
+    background-color: var(--color-grey-light);
+
+    &-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100%;
+
+      &-left {
+        @media (min-width: 1200px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+
+        .f-h5 {
+          margin-bottom: scaling(83);
+          @media (min-width: 1200px) {
+            margin-bottom: scaling(33);
+          }
+        }
+
+        .a-button {
+          position: absolute;
+          bottom: scaling(20);
+          z-index: 1;
+          @media (min-width: 1200px) {
+            position: static;
+          }
+        }
+      }
+    }
+
+    &-img {
+      position: absolute;
+      right: 0;
+      bottom: scaling(78);
+      max-height: scaling(200);
+      @media (min-width: 1200px) {
+        max-height: unset;
+        bottom: 0;
+      }
+    }
+  }
+}

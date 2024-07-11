@@ -1,0 +1,8 @@
+.s-form-classic {
+  width: calc(100% + calc(var(--scale) * 24));
+  margin-left: calc((var(--scale) * 12) * -1);
+  @media (min-width: 768px) {
+    width: 100%;
+    margin: unset;
+  }
+}

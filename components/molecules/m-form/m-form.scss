@@ -1,0 +1,88 @@
+.m-form {
+  padding: var(--a-padding-x3);
+  background: var(--color-white);
+
+  @media (min-width: 1200px) {
+    padding: var(--a-padding-x6);
+  }
+
+  .a-button {
+    max-width: 100%;
+    margin-bottom: var(--a-padding-x4);
+  }
+
+  &__title {
+    margin-bottom: var(--a-padding-x5);
+
+    @media (min-width: 1200px) {
+      margin-bottom: var(--a-padding-x8);
+    }
+  }
+
+  &-classic {
+    color: var(--color-white);
+    background: url('../images/s-form/bg-mob.png') right top / cover no-repeat, var(--color-blue);
+    border-radius: var(--border-radius-x5);
+    @media (min-width: 1200px) {
+      background: url('../images/s-form/bg-desk.png') right center / cover no-repeat, var(--color-blue);
+    }
+
+    .s-form {
+      &__inputs {
+        gap: scaling(16);
+        margin-bottom: scaling(22);
+        @media (min-width: 1200px) {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); // если нет промокода (3)
+          grid-column: 1 / 4; // если нет промокода ( 1/4)
+          gap: scaling(20);
+          margin-bottom: unset;
+        }
+      }
+    }
+
+    .m-form {
+      &__title {
+        max-width: scaling(280);
+        margin-bottom: var(--a-padding-x2);
+        @media (min-width: 768px) {
+          max-width: 60%;
+        }
+        @media (min-width: 1200px) {
+          max-width: 100%;
+          font-size: scaling(64);
+        }
+      }
+
+      &__description {
+        margin-bottom: var(--a-padding-x5);
+
+        @media (min-width: 1200px) {
+          margin-bottom: var(--a-padding-x6);
+        }
+      }
+
+      &__stuffing {
+        @media (min-width: 1200px) {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr); // если нет промокода (4)
+          gap: scaling(20);
+          margin-bottom: var(--a-padding-x6);
+        }
+      }
+    }
+
+    .a-button {
+      @media (min-width: 1200px) {
+        min-height: scaling(70);
+        margin: unset;
+        padding: var(--a-padding-x3) 0;
+        box-shadow: unset;
+        transform: unset;
+      }
+      @media (min-width: 1920px) {
+        min-height: scaling(54);
+      }
+    }
+  }
+}

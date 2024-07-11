@@ -1,0 +1,117 @@
+.s-speakers {
+  .swiper {
+    overflow: visible;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--a-padding-x6);
+    @media (min-width: 1440px) {
+      margin-bottom: scaling(50);
+    }
+  }
+
+  &__navigation {
+    display: none;
+    @media (min-width: 1440px) {
+      position: relative;
+      right: 0;
+      display: flex;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: scaling(55);
+      height: scaling(55);
+      background: var(--color-grey-light);
+      border-radius: var(--border-radius-x3);
+      cursor: pointer;
+
+      &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: default;
+      }
+    }
+
+    &-prev {
+      transform: rotate(-180deg);
+    }
+
+    &-next {
+      margin-left: var(--a-padding-x5);
+    }
+  }
+
+  &__slider {
+    &-slide {
+      max-width: scaling(755);
+    }
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: var(--a-padding-x3);
+      background: var(--color-white);
+      border-radius: var(--border-radius-x5);
+      @media (min-width: 1200px) {
+        padding: var(--a-padding-x6);
+        flex-direction: row;
+      }
+
+      &__name {
+        font-size: scaling(19);
+        @media (min-width: 1200px) {
+          font-size: scaling(38);
+        }
+      }
+
+      &__image {
+        order: -1;
+        @media (min-width: 1200px) {
+          order: unset;
+        }
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 1200px) {
+          max-width: 50%;
+        }
+        .a-button {
+          margin-top: 28px;
+          @media (min-width: 1200px) {
+            margin-top: auto;
+            width: fit-content;
+            padding-left: scaling(54);
+            padding-right: scaling(54);
+          }
+        }
+      }
+
+      &__text {
+        margin-top: var(--a-padding-x2);
+        color: var(--color-grey-text);
+        @media (min-width: 1200px) {
+          margin-top: var(--a-padding-x3);
+        }
+      }
+
+      &__subtitle {
+        margin-top: auto;
+      }
+    }
+  }
+
+  &__pagination {
+    margin-top: var(--a-padding-x4);
+    @media (min-width: 1200px) {
+      margin-top: var(--a-padding-x10);
+    }
+  }
+}

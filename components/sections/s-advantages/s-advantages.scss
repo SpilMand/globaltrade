@@ -1,0 +1,31 @@
+.s-advantages {
+  font-size: scaling(16);
+
+  .swiper-wrapper {
+    @media (min-width: 992px) {
+      display: grid !important;
+      grid-template-columns: repeat(3, 1fr);
+      gap: scaling(10);
+    }
+    @media (min-width: 1440px) {
+      gap: scaling(20);
+    }
+  }
+
+  &__slider {
+    overflow: visible;
+
+    &-card {
+      width: 100%;
+      max-width: scaling(280);
+
+      @media (min-width: 768px) {
+        max-width: scaling(600);
+      }
+
+      @media (min-width: 1200px) {
+        max-width: unset;
+      }
+    }
+  }
+}

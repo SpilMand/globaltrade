@@ -1,0 +1,7 @@
+.s-program {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: scaling(8);
+  }
+}

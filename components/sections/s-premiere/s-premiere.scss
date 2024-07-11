@@ -1,0 +1,128 @@
+.s-premiere {
+  &__title {
+    display: none;
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 1200px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: scaling(20);
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: var(--a-padding-x3);
+    background: var(--color-grey-light);
+    border-radius: var(--border-radius-x5);
+    @media (min-width: 1200px) {
+      padding: var(--a-padding-x6);
+    }
+
+    &-title {
+      max-width: scaling(300);
+      margin-bottom: var(--a-padding-x11);
+      @media (min-width: 1200px) {
+        max-width: scaling(600);
+        margin-bottom: scaling(66);
+      }
+    }
+
+    &-list {
+      position: relative;
+      margin-bottom: var(--a-padding-x3);
+      padding-left: var(--a-padding-x4);
+      @media (min-width: 1200px) {
+        margin-bottom: var(--a-padding-x4);
+        padding-left: var(--a-padding-x7);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: scaling(6);
+        left: 0;
+        width: scaling(8);
+        height: scaling(8);
+        background: var(--color-black);
+        border-radius: scaling(2);
+        @media (min-width: 1200px) {
+          top: scaling(7);
+          width: scaling(12);
+          height: scaling(12);
+        }
+      }
+    }
+  }
+
+  &__pic {
+    overflow: hidden;
+    margin-top: var(--a-padding-x5);
+    border-radius: var(--border-radius-x5);
+    @media (min-width: 1200px) {
+      margin: 0;
+    }
+
+    &-image {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &-desktop {
+        display: none;
+        @media (min-width: 768px) {
+          display: block;
+        }
+      }
+
+      &-mobile {
+        @media (min-width: 768px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: var(--a-padding-x9);
+    @media (min-width: 1200px) {
+      position: absolute;
+      top: scaling(32);
+      right: scaling(32);
+      margin: 0;
+    }
+  }
+
+  &__icon {
+    width: scaling(32);
+    height: scaling(32);
+
+    &:last-child {
+      margin-left: var(--a-padding-x28);
+      @media (min-width: 1200px) {
+        margin-left: var(--a-padding-x3);
+      }
+    }
+    @media (min-width: 1200px) {
+      width: scaling(47);
+      height: scaling(47);
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
